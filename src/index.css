@@ -1,11 +1,17 @@
 body {
   margin: 0;
   padding: 0;
-  overflow-y: hidden;
   overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #ffdada;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
 }

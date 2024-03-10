@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&family=Quicksand:wght@300..700&display=swap");
+
+#user-image-div {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 2%;
+}
+
+#user-image-div img {
+  width: 400px;
+  height: 400px;
+}
+
+#message-div {
+  position: absolute;
+  left: 150px;
+  top: 64%;
+  transition: all 5s;
+  display: none;
+}
+#message-div p {
+  font-size: 22px;
+}
+#main-server-image-div {
+  position: absolute;
+  width: 189px;
+  height: 204px;
+  top: 40%;
+  left: 45%;
+}
+
+#main-server-image-div img {
+  width: 220px;
+  height: 220px;
+}
+.next-button-div {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+}
+
+#next-button {
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #0091ff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.server-image-div-1 {
+  position: absolute;
+  top: 18%;
+  left: 60%;
+  width: 453px;
+}
+
+.server-image-div-2 {
+  position: absolute;
+  top: 38%;
+  left: 65%;
+  width: 453px;
+}
+.server-image-div-3 {
+  position: absolute;
+  top: 58%;
+  left: 65%;
+  width: 453px;
+}
+.server-image-div-4 {
+  position: absolute;
+  top: 78%;
+  left: 60%;
+  width: 453px;
+}
+
+#server-image-div img {
+  width: 80px;
+  height: 80px;
+}
+
+#div-span-word-0 {
+  transition: all 5s;
+}
+#m-r {
+  display: flex;
+  position: absolute;
+  font-weight: 700;
+  border: 2px solid black;
+  border-style: dashed;
+  padding: 5px;
+  border-radius: 25px;
+  width: 400px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+#m-r p {
+  margin: 0; /* Add this line to remove default margin */
+}
+
+#m-r p:nth-child(1) {
+  font-size: 18px;
+  padding-right: 10px;
+  color: brown;
+}
+
+#m-r p:nth-child(2) {
+  font-size: 18px;
+  color: rgb(0, 17, 255);
+}

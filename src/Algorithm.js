@@ -1,17 +1,12 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { ForceGraph2D } from "react-force-graph";
 import * as d3 from "d3";
 import treeData from "./treeData";
+import Navbar from "./components/Navbar";
 
-function Graph() {
-  const useForceUpdate = () => {
-    const setToggle = useState(false)[1];
-    return () => setToggle((b) => !b);
-  };
-
+function Algorithm() {
   const ForceTree = ({ data }) => {
     const fgRef = useRef();
-    const forceUpdate = useForceUpdate();
 
     useEffect(() => {
       fgRef.current.d3Force(
@@ -46,32 +41,31 @@ function Graph() {
     };
 
     return (
-      <ForceGraph2D
-        ref={fgRef}
-        graphData={data}
-        dagMode={"lr"}
-        dagLevelDistance={150}
-        backgroundColor="#FBC3C3"
-        linkColor={() => "#2E2E2E"}
-        nodeRelSize={2}
-        nodeId="path"
-        nodeVal={(node) => 100 / (node.level + 9)}
-        nodeAutoColorBy="module"
-        linkDirectionalParticles={2}
-        linkDirectionalParticleWidth={9}
-        d3VelocityDecay={0.3}
-        nodeCanvasObject={nodeCanvasObject}
-        centerAt={(0, 0, 0)}
-        style={{
-          width: "100%",
-          height: "90%",
-          justifyContent: "center",
-        }}
-      />
+      <>
+        <Navbar style={{ zIndex: 1 }} /> {/* Container Layout */}
+        <ForceGraph2D
+          height={600}
+          ref={fgRef}
+          graphData={data}
+          dagMode={"lr"}
+          dagLevelDistance={150}
+          backgroundColor="#ffdada"
+          linkColor={() => "#2E2E2E"}
+          nodeRelSize={2}
+          nodeId="path"
+          nodeVal={(node) => 100 / (node.level + 9)}
+          nodeAutoColorBy="module"
+          linkDirectionalParticles={2}
+          linkDirectionalParticleWidth={9}
+          d3VelocityDecay={0.3}
+          nodeCanvasObject={nodeCanvasObject}
+          centerAt={(0, 0)}
+        />
+      </>
     );
   };
 
   return <ForceTree data={treeData} />;
 }
 
-export default Graph;
+export default Algorithm;
