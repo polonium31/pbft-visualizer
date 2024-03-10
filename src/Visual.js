@@ -5,6 +5,7 @@ import MainServerImage from "./asserts/main-server.png";
 import SubServerImage from "./asserts/sub-server.png";
 import CustomArray from "./components/CustomArray";
 import Navbar from "./components/Navbar";
+import { redirect } from "react-router-dom";
 function Animated() {
   const [pressCount, setPressCount] = useState(0);
 
@@ -150,9 +151,18 @@ function Animated() {
         document.getElementById("status").innerText = "Message committed";
         break;
       default:
-        // Reload or reset logic
+        document.getElementById("custom-array-s1").innerText = "";
+        document.getElementById("custom-array-s2").innerText = "";
+        document.getElementById("custom-array-s3").innerText = "";
+        document.getElementById("custom-array-s4").innerText = "";
+        document.getElementById("next-button").innerText = "NO MORE STEPS";
+        document.getElementById("next-button").style.fontSize = "12px";
+        document.getElementById("next-button").style.backgroundColor =
+          "#373737";
+        document.getElementById("next-button").disabled = true;
+        alert("No more steps, Explore other features!");
         setPressCount(0);
-        window.location.reload();
+
         break;
     }
   };
